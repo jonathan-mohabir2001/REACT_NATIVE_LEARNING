@@ -23,10 +23,12 @@ const Stack = createStackNavigator();
 
 function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="About" component={About} />
+        <Stack.Screen name="Prices" component={Prices} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 

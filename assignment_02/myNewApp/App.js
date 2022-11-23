@@ -10,26 +10,38 @@ import { StyleSheet, Text, View } from 'react-native';
 //About and prices page to be imported from components directory
 import About from './components/About';
 import Prices from './components/Prices';
+// Components imported from the components directory. 
 
 
-import {NavigationContainer} from '@react-navigation/native';
-// navigation container to be used to navigate between pages
-import {createStackNavigator} from '@react-navigation/stack';
-// Stack navigator needed to navigate between pages
+import 'react-native-gesture-handler';
+import * as React from 'react';
+
+// navigation components imported below
+import { NavigationContainer } from '@react-navigation/native';
+import{createStackNavigator} from '@react-navigation/stack';
+
+
+
 
 const Stack = createStackNavigator();
-// an instance of the stack navigator is created to allow navigation between pages
+// instance of the navigation container created.
 
 
 function App() {
   return (
     <NavigationContainer>
+
       <Stack.Navigator>
+
         <Stack.Screen name="About" component={About} />
         <Stack.Screen name="Prices" component={Prices} />
+
       </Stack.Navigator>
+
+
     </NavigationContainer>
-  );
+
+);
 }
 
 
